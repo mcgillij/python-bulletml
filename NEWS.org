@@ -1,0 +1,11 @@
+* 3 - 2015.?.?
+- Update documentation and homepage.
+- Fix a security issue reading untrusted bullet files.
+
+* 2 - 2010.04.24
+- Easier to extend Action with new behaviors.
+- Conditional <if>/<then>/<else> elements.
+- Faster Pyrex-less collision extension.
+
+* 1 - 2010.04.10
+- Initial release.
