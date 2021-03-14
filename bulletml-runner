@@ -49,8 +49,8 @@ def main(argv):
                                          
         active = set([source])
         source.vanished = True
-        print filename
-        print "  Loaded %d top-level actions." % len(source.actions)
+        print(filename)
+        print("  Loaded %d top-level actions." % len(source.actions))
         frames = 0
         total = 0
         paused = False
@@ -108,13 +108,13 @@ def main(argv):
 
                 frames += 1
                 if frames % 100 == 0:
-                    print "  Processing: %04d: %d bullets, %d active." % (
-                        frames, total, count)
+                    print("  Processing: %04d: %d bullets, %d active." % (
+                        frames, total, count))
                     if elapsed:
                         seconds_per_bullet = elapsed / count
                         bullets_per_second = count / elapsed
-                        print "  %g seconds per bullet (120Hz max: %g)." % (
-                            seconds_per_bullet, bullets_per_second / 120)
+                        print("  %g seconds per bullet (120Hz max: %g)." % (
+                            seconds_per_bullet, bullets_per_second / 120))
 
             screen.fill([0, 0, 64] if collides else [0, 0, 0] )
             for obj in active:
@@ -133,7 +133,7 @@ def main(argv):
             clock.tick(60)
             pygame.display.flip()
 
-        print "  Finished: %04d: %d bullets." % (frames, total)
+        print("  Finished: %04d: %d bullets." % (frames, total))
 
 if __name__ == "__main__":
     main(sys.argv[1:])
